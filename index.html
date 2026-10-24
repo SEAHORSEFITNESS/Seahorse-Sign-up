@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seahorse Fitness Inc. | Registration Form</title>
+<style>
+:root{--navy:#123a5a;--blue:#1676a8;--light:#eef6fa;--line:#cbd7df;--ink:#20313d;--muted:#5d6d78}
+*{box-sizing:border-box}body{margin:0;background:#f3f6f8;color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+header{background:linear-gradient(120deg,#123a5a,#1676a8);color:#fff;padding:26px 16px;text-align:center}
+header h1{font-size:clamp(22px,4vw,30px);margin:0 0 6px}header p{margin:0;opacity:.92}
+main{max-width:900px;margin:22px auto;padding:0 14px 40px}.card{background:#fff;border:1px solid #e0e7ec;border-radius:14px;padding:clamp(16px,3vw,26px);margin-bottom:18px;box-shadow:0 4px 16px #163b5210}
+h2{font-size:21px;color:var(--navy);margin:0 0 16px;padding-bottom:9px;border-bottom:1px solid #e3ebf0}
+h3{font-size:17px;margin:18px 0 8px;color:var(--navy)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.field{min-width:0}.field.full{grid-column:1/-1}
+label,.label{display:block;font-weight:700;font-size:14px;margin-bottom:7px;color:#123a5a}label span{font-weight:400;color:var(--muted)}.field input:not([type=checkbox]):not([type=radio]),.field select,.field textarea{background:#fbfdff;border:1px solid #b8cbd7}.field{padding:10px;border:1px solid #e2eaf0;border-radius:10px;background:#fff}.field label{line-height:1.35}
+input,select,textarea{width:100%;font:inherit;padding:12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);min-height:46px}
+input:focus,select:focus,textarea:focus{outline:2px solid #8dc9e5;border-color:var(--blue)}.choices{display:flex;flex-wrap:wrap;gap:12px 20px}.choices label{display:flex;align-items:center;gap:8px;font-weight:500;margin:0}.choices input{width:20px;height:20px;min-height:auto;accent-color:var(--blue)}
+.notice{font-size:14px;color:var(--muted);background:var(--light);padding:12px;border-radius:8px}
+.waiver{max-height:390px;overflow:auto;border:1px solid var(--line);border-radius:8px;padding:14px;background:#fcfdfe;font-size:14px;white-space:normal}.waiver p{margin:0 0 12px}
+.sigbox{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff}.sigbox canvas{display:block;width:100%;height:170px;touch-action:none}.sigtools{display:flex;justify-content:space-between;align-items:center;padding:8px 10px;background:#f6f9fb;border-top:1px solid var(--line);font-size:13px}
+button{border:0;border-radius:9px;padding:11px 16px;font:inherit;font-weight:650;cursor:pointer}.clear{background:#e8eef2;color:var(--navy)}.submit{background:var(--blue);color:#fff;width:100%;padding:15px;font-size:17px}.submit:disabled{opacity:.6;cursor:wait}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:10px 0 25px}.required{color:#b42318}
+@media(max-width:620px){.grid{grid-template-columns:1fr}.field.full{grid-column:auto}main{margin-top:12px}.card{border-radius:10px}}
+</style>
+</head>
+<body>
+<header>
+  <h1>海馬游泳訓練中心<br>SEAHORSE FITNESS INC.</h1>
+  <p>Student Registration & Waiver Form / 學生報名及免責同意書</p>
+</header>
+<main>
+<form id="registrationForm">
+  <section class="card">
+    <h2>Student Information / 學生資料</h2>
+    <div class="grid">
+      <div class="field"><label for="studentFirst">First Name / 名字 <span class="required">*</span></label><input id="studentFirst" name="studentFirst" required autocomplete="given-name"></div>
+      <div class="field"><label for="studentLast">Last Name / 姓氏 <span class="required">*</span></label><input id="studentLast" name="studentLast" required autocomplete="family-name"></div>
+      <div class="field"><label for="studentChinese">Chinese Name / 中文姓名</label><input id="studentChinese" name="studentChinese"></div>
+      <div class="field"><label for="dob">Date of Birth (M/D/YYYY) / 出生日期</label><input id="dob" name="dob" type="date"></div>
+      <div class="field full"><label for="address">Address / 地址</label><input id="address" name="address" autocomplete="street-address"></div>
+      <div class="field"><label for="city">City / 城市</label><input id="city" name="city" autocomplete="address-level2"></div>
+      <div class="field"><label for="stateZip">State / ZIP / 州及郵區</label><input id="stateZip" name="stateZip" autocomplete="postal-code"></div>
+      <div class="field"><label for="homePhone">Home Phone / 家庭電話</label><input id="homePhone" name="homePhone" type="tel" autocomplete="tel"></div>
+      <div class="field"><span class="label">Sex / 性別</span><div class="choices">
+        <label><input type="radio" name="sex" value="M"> M / 男</label><label><input type="radio" name="sex" value="F"> F / 女</label><label><input type="radio" name="sex" value="Prefer not to say"> Prefer not to say</label>
+      </div></div>
+      <div class="field full"><label for="email">E-mail / 電郵</label><input id="email" name="email" type="email" autocomplete="email"></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Parent / Guardian Information / 監護人／家長資料</h2>
+    <div class="grid">
+      <div class="field"><label for="guardianFirst">First Name / 名字 <span class="required">*</span></label><input id="guardianFirst" name="guardianFirst" required></div>
+      <div class="field"><label for="guardianLast">Last Name / 姓氏 <span class="required">*</span></label><input id="guardianLast" name="guardianLast" required></div>
+      <div class="field"><label for="workPhone">Work Phone / 工作電話</label><input id="workPhone" name="workPhone" type="tel"></div>
+      <div class="field"><label for="mobilePhone">Mobile Phone / 移動電話 <span class="required">*</span></label><input id="mobilePhone" name="mobilePhone" type="tel" required autocomplete="tel"></div>
+      <div class="field full"><label for="relation">Relation to Student / 與學生關係</label><input id="relation" name="relation" placeholder="e.g. Mother, Father, Legal Guardian"></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Selected Schedule / 所選課程</h2>
+    <p class="notice">Please select all applicable days. / 請選擇所有適用的上課日期。</p>
+    <div class="choices" style="margin:14px 0 18px">
+      <label><input type="checkbox" name="scheduleDays" value="Tuesday 星期二"> Tuesday 星期二</label>
+      <label><input type="checkbox" name="scheduleDays" value="Wednesday 星期三"> Wednesday 星期三</label>
+      <label><input type="checkbox" name="scheduleDays" value="Thursday 星期四"> Thursday 星期四</label>
+      <label><input type="checkbox" name="scheduleDays" value="Friday 星期五"> Friday 星期五</label>
+      <label><input type="checkbox" name="scheduleDays" value="Saturday 星期六"> Saturday 星期六</label>
+      <label><input type="checkbox" name="scheduleDays" value="Sunday 星期天"> Sunday 星期天</label>
+    </div>
+    <div class="grid">
+      <div class="field"><label for="selectedClass">Selected Class / 所選課程</label><input id="selectedClass" name="selectedClass" placeholder="Class name or level / 課程名稱或級別"></div>
+      <div class="field"><label for="selectedTime">Preferred Time / 所選時間</label><input id="selectedTime" name="selectedTime" placeholder="e.g. 3:30 PM"></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Waiver and Release of Liability / 免責及責任豁免同意書</h2>
+    <p><strong>Permission Form</strong></p>
+    <div class="waiver">
+      <p>This Agreement waives the liability and holds harmless Seahorse Fitness, Inc. (hereinafter referred to as “SFI”) for any use of the services, facilities, swimming pool and/or programs offered by SFI. This Waiver and Release must be signed by a parent or legal guardian. A non-parent cannot sign this waiver for other people’s children.</p>
+      <p><strong>PLEASE READ CAREFULLY</strong></p>
+      <p>1. I (the applicant signing below) wish either for myself or my child (if applicable) to utilize the services, facilities, swimming pool and/or programs offered by SFI.</p>
+      <p>2. I hereby agree that the use of the services, facilities, swimming pool and/or programs is at my child’s (if applicable) and my own risk. As a condition of my and my child’s (if applicable) use of such services, facilities, swimming pool and/or fitness programs, I, on behalf of myself, my heirs and assigns and my child (if applicable) expressly agree to forever discharge, waive and release SFI, its owners, management, staff, servants, agents, employees and/or independent contractors and their heirs, successors and assigns for any and all claims, demands, injuries, damages, costs, expenses, actions, or courses of action and from all the acts of active or passive negligence on the part of SFI, its owners, management, staff, servants, agents, employees and/or independent contractors that I or my child (if applicable) may have or acquire against SFI, its owners, management, staff, servants, agents, employees and/or independent contractors on account of bodily injury, mental injuries, and/or property damages from any mishap, accident, loss, damages or injuries suffered by my child (if applicable) or myself or others resulting from, connected with or caused by the use of SFI’s swimming pool and/or facilities whether located on or off SFI’s premises, including, but not limited to, any injury resulting from mechanical defects or failure of any equipment or devices used in such services, programs, swimming pool or facilities. I further agree to defend, indemnify and hold harmless SFI, its owners, management, staff, servants, agents, employees and/or independent contractors, their heirs, successors and assigns from any and all claims, losses or liability arising from, connected with or caused by my or my child’s (if applicable) use of SFI’s services, facilities, swimming pool and/or fitness programs, whether located on or off SFI’s premises.</p>
+      <p>3. I declare and affirm that I and my child (if applicable) am (or are) in good medical and physical condition and that the use of SFI’s services, facilities, swimming pool, does not pose any danger to myself or my child’s (if applicable) health.</p>
+      <p>4. I, the undersigned parent or legal guardian, specifically acknowledge the potential of risk and injury involved in the use of SFI’s services, facilities, swimming pool and/or programs and do hereby assume said risk and authorize SFI or its representatives to obtain emergency medical treatment for my child during the course of any program and agree to be responsible for the costs of said emergency treatment. It is understood and agreed that SFI or its representatives shall be required to maintain medical or hospitalization insurance coverage with respect to any program and those who participate in it.</p>
+      <p>5. I agree that I and my child (if applicable) will abide by the rules and regulations of SFI, which may be posted at the swimming pool area or issued orally and/or published in the membership handbook. These rules may be amended at SFI’s discretion. I agree that I and my child (if applicable) will not engage in any behavior injurious to the enjoyment of the swimming pool by other members or guests. I understand and agree that my child’s (if applicable) use of SFI may be immediately terminated if my (or their) behavior is not in accordance with the above.</p>
+      <p>I have read and understand the foregoing, and acknowledge my consent to the terms of the Waiver and Release for myself and my child (if applicable) by signing this Agreement.</p>
+    </div>
+    <p class="notice" style="margin-top:12px">The waiver wording is based on the registration form you provided. Please have your organization/legal adviser review the online version before using it for actual enrollment. / 本同意書文字根據您提供的報名表整理，正式使用前建議由機構或法律顧問審閱。</p>
+    <div class="grid" style="margin-top:16px">
+      <div class="field full"><label for="applicantName">Applicant's Printed Name / 申請人正楷姓名 <span class="required">*</span></label><input id="applicantName" name="applicantName" required></div>
+      <div class="field"><label for="childName">Child's Printed Name / 孩子正楷姓名</label><input id="childName" name="childName"></div>
+      <div class="field"><label for="daytimePhone">Daytime Telephone Number / 日間電話</label><input id="daytimePhone" name="daytimePhone" type="tel"></div>
+      <div class="field"><label for="eveningPhone">Evening Telephone Number / 晚間電話</label><input id="eveningPhone" name="eveningPhone" type="tel"></div>
+      <div class="field"><label for="cellPhone">Cell Phone Number / 手機</label><input id="cellPhone" name="cellPhone" type="tel"></div>
+      <div class="field"><label for="alternatePhone">Alternate Telephone Number / 其他電話</label><input id="alternatePhone" name="alternatePhone" type="tel"></div>
+      <div class="field"><label for="emergencyContact">Emergency Contact Person / 緊急聯絡人 <span class="required">*</span></label><input id="emergencyContact" name="emergencyContact" required></div>
+      <div class="field"><label for="emergencyPhone">Emergency Contact Telephone / 緊急聯絡電話 <span class="required">*</span></label><input id="emergencyPhone" name="emergencyPhone" type="tel" required></div>
+      <div class="field full"><label for="emergencyRelation">Relationship / 與學生關係</label><input id="emergencyRelation" name="emergencyRelation"></div>
+      <div class="field full"><label><input type="checkbox" id="agreeWaiver" required style="width:20px;min-height:auto;display:inline-block;vertical-align:middle"> I have read and agree to the Waiver and Release above. / 我已閱讀並同意以上免責及責任豁免條款。 <span class="required">*</span></label></div>
+      <div class="field full"><label>Parent / Guardian Signature / 家長或監護人簽名 <span class="required">*</span></label>
+        <div class="sigbox"><canvas id="signatureCanvas" aria-label="Signature pad"></canvas><div class="sigtools"><span>Sign with finger or mouse / 請在此簽名</span><button type="button" class="clear" id="clearSignature">Clear / 清除</button></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="card">
+    <h2>Submit Registration / 提交報名</h2>
+    <p class="notice">For your privacy, submit this form only on the official registration page. Do not close the page while submitting. / 為保障私隱，請只在官方報名頁面提交資料，提交期間請勿關閉頁面。</p>
+    <button type="submit" class="submit" id="submitButton">Submit Form / 提交表格</button>
+    <p id="status" role="status" aria-live="polite"></p>
+  </section>
+</form>
+</main>
+<div id="successModal" role="dialog" aria-modal="true" aria-labelledby="successTitle" style="display:none;position:fixed;inset:0;background:rgba(12,29,42,.58);z-index:9999;align-items:center;justify-content:center;padding:20px">
+  <div style="background:#fff;max-width:420px;width:100%;border-radius:16px;padding:28px;text-align:center;box-shadow:0 20px 60px #0003">
+    <div style="font-size:42px;line-height:1.2;color:#16804a">✓</div>
+    <h2 id="successTitle" style="border:0;margin:10px 0 8px;padding:0">Submission Complete / 提交完成</h2>
+    <p style="margin:0 0 12px">Your registration has been submitted. / 您的報名表已提交。</p>
+    <p style="font-size:13px;color:#5d6d78;margin:0">This window will close automatically. / 此視窗將自動關閉。</p>
+  </div>
+</div>
+<footer>Seahorse Fitness Inc. · E-mail: Seahorsefitnessinc@yahoo.com · Office: 917-391-7660</footer>
+<script>
+// Replace with your deployed Google Apps Script Web App URL.
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzxRRaB-HRx9YhE2RiNWT3wFaLJ7l71DpwCTwbahEIpo0hbWbaiKEL_W45VJqQMhSBB/exec";
+
+const canvas = document.getElementById("signatureCanvas");
+const ctx = canvas.getContext("2d");
+let drawing = false, hasSignature = false, last = null;
+function resizeCanvas(){
+  const ratio = Math.max(window.devicePixelRatio || 1, 1);
+  const rect = canvas.getBoundingClientRect();
+  const saved = hasSignature ? canvas.toDataURL() : null;
+  canvas.width = Math.max(1, rect.width * ratio);
+  canvas.height = Math.max(1, rect.height * ratio);
+  ctx.setTransform(ratio,0,0,ratio,0,0);
+  ctx.lineWidth = 2.4; ctx.lineCap = "round"; ctx.lineJoin = "round"; ctx.strokeStyle = "#123a5a";
+  if(saved){ const img = new Image(); img.onload=()=>ctx.drawImage(img,0,0,rect.width,rect.height); img.src=saved; }
+}
+function point(e){ const r=canvas.getBoundingClientRect(); return {x:e.clientX-r.left,y:e.clientY-r.top}; }
+canvas.addEventListener("pointerdown",e=>{drawing=true;hasSignature=true;last=point(e);canvas.setPointerCapture(e.pointerId);});
+canvas.addEventListener("pointermove",e=>{if(!drawing)return;const p=point(e);ctx.beginPath();ctx.moveTo(last.x,last.y);ctx.lineTo(p.x,p.y);ctx.stroke();last=p;});
+function endDraw(){drawing=false;last=null;}
+canvas.addEventListener("pointerup",endDraw);canvas.addEventListener("pointercancel",endDraw);
+document.getElementById("clearSignature").addEventListener("click",()=>{ctx.clearRect(0,0,canvas.width,canvas.height);hasSignature=false;});
+window.addEventListener("resize",resizeCanvas); resizeCanvas();
+
+document.getElementById("registrationForm").addEventListener("submit", async (e)=>{
+  e.preventDefault();
+  const status=document.getElementById("status"), button=document.getElementById("submitButton");
+  if(!hasSignature){status.textContent="Please sign before submitting. / 請先簽名。";return;}
+  if(SCRIPT_URL.includes("PASTE_YOUR")){status.textContent="Setup required: add your Apps Script Web App URL to this HTML file first. / 請先設定 Apps Script 網頁應用程式網址。";return;}
+  const form=e.currentTarget;
+  const data={};
+  new FormData(form).forEach((v,k)=>{if(k!=="scheduleDays")data[k]=v;});
+  data.scheduleDays=Array.from(form.querySelectorAll('input[name="scheduleDays"]:checked')).map(x=>x.value);
+  data.agreeWaiver=document.getElementById("agreeWaiver").checked;
+  data.signatureDataUrl=canvas.toDataURL("image/png");
+  data.submittedAt=new Date().toISOString();
+  button.disabled=true;button.textContent="Submitting… / 正在提交…";status.textContent="";
+  try{
+    await fetch(SCRIPT_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(data)});
+    document.getElementById("successModal").style.display="flex";
+    try { if(window.parent && window.parent !== window) window.parent.postMessage({type:"SEAHORSE_REGISTRATION_SUBMITTED"}, "*"); } catch(ignore) {}
+    setTimeout(()=>{ try { window.close(); } catch(ignore) {} }, 1800);
+  }catch(err){
+    status.textContent="Submission may have failed. Please try again or contact the office. / 提交可能失敗，請重試或聯絡辦公室。";
+  }finally{
+    button.disabled=false;button.textContent="Submit Form / 提交表格";
+  }
+});
+</script>
+</body>
+</html>
